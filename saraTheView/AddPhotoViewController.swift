@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -18,7 +19,24 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func savePhoto(_ sender: Any) {
+
+    @IBOutlet weak var placeholderPhoto: UIImageView!
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func savePhoto(_ sender: UIButton) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let newCDPhoto = Photos(entity: Photos.entity(), insertInto: context)
+            newCDPhoto.caption = textField.text
+            
+            if let userImage = placeholderPhoto.image {
+                if let userImageData = userImage.pngData() {
+                    newCDPhoto.imageData = userImageData
+                }
+            }
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     @IBAction func photoLibrary(_ sender: Any) {
@@ -36,9 +54,7 @@ class AddPhotoViewController: UIViewController, UIImagePickerControllerDelegate,
         present(imagePicker, animated: true, completion: nil)
     }
     
-    @IBOutlet weak var placeholderPhoto: UIImageView!
     
-    @IBOutlet weak var textField: UITextField!
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
