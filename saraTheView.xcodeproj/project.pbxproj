@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C69021A522C26E3100FF21FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69021A422C26E3100FF21FF /* AppDelegate.swift */; };
-		C69021A722C26E3100FF21FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69021A622C26E3100FF21FF /* ViewController.swift */; };
 		C69021AA22C26E3100FF21FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C69021A822C26E3100FF21FF /* Main.storyboard */; };
 		C69021AD22C26E3100FF21FF /* saraTheView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C69021AB22C26E3100FF21FF /* saraTheView.xcdatamodeld */; };
 		C69021AF22C26E3200FF21FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69021AE22C26E3200FF21FF /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		C69021A122C26E3100FF21FF /* saraTheView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = saraTheView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69021A422C26E3100FF21FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C69021A622C26E3100FF21FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C69021A922C26E3100FF21FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C69021AC22C26E3100FF21FF /* saraTheView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = saraTheView.xcdatamodel; sourceTree = "<group>"; };
 		C69021AE22C26E3200FF21FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				C69021A422C26E3100FF21FF /* AppDelegate.swift */,
-				C69021A622C26E3100FF21FF /* ViewController.swift */,
 				C69021A822C26E3100FF21FF /* Main.storyboard */,
 				C69021AE22C26E3200FF21FF /* Assets.xcassets */,
 				C69021B022C26E3200FF21FF /* LaunchScreen.storyboard */,
@@ -260,7 +257,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C69021AD22C26E3100FF21FF /* saraTheView.xcdatamodeld in Sources */,
-				C69021A722C26E3100FF21FF /* ViewController.swift in Sources */,
 				C69021A522C26E3100FF21FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
