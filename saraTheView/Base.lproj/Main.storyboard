@@ -17,7 +17,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7TQ-bm-2Yf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.9879677463030887" green="0.98891790212816388" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.87508658699999997" green="0.89538393289999996" blue="0.92537842049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.87508658699999997" green="0.89538393289999996" blue="0.92537842049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6gU-59-alS">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -26,6 +28,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.87508658699999997" green="0.89538393289999996" blue="0.92537842049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,7 +53,7 @@
         <!--add new photo-->
         <scene sceneID="mFC-Qu-sWr">
             <objects>
-                <viewController id="hgX-li-DsC" sceneMemberID="viewController">
+                <viewController id="hgX-li-DsC" customClass="AddPhotoViewController" customModule="saraTheView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hA-VC-h1D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +71,9 @@
                                     <color key="titleColor" red="0.979982044" green="1" blue="0.68023434400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.32791504640000002" green="0.39008267619999998" blue="0.6447271832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="photoCamera:" destination="hgX-li-DsC" eventType="touchUpInside" id="e3M-W0-xOe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI4-be-VsS">
                                 <rect key="frame" x="159" y="536" width="60" height="33"/>
@@ -78,6 +84,9 @@
                                     <color key="titleColor" red="0.979982044" green="1" blue="0.68023434400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.32791504640000002" green="0.39008267619999998" blue="0.6447271832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="photoAlbum:" destination="hgX-li-DsC" eventType="touchUpInside" id="RBM-Vb-RmN"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ClA-aU-2zf">
                                 <rect key="frame" x="67" y="296" width="240" height="30"/>
@@ -95,6 +104,9 @@
                                     <color key="titleColor" red="0.979982044" green="1" blue="0.68023434400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.32791504640000002" green="0.39008267619999998" blue="0.6447271832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePhoto:" destination="hgX-li-DsC" eventType="touchUpInside" id="Iua-Oa-zP8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O96-jP-ITF">
                                 <rect key="frame" x="137" y="478" width="103" height="33"/>
@@ -105,6 +117,9 @@
                                     <color key="titleColor" red="0.979982044" green="1" blue="0.68023434400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="0.32791504640000002" green="0.39008267619999998" blue="0.6447271832" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="photoLibrary:" destination="hgX-li-DsC" eventType="touchUpInside" id="jf1-Hl-rla"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87508658696641217" green="0.89538393293387208" blue="0.92537842050915586" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -112,6 +127,10 @@
                         <viewLayoutGuide key="safeArea" id="7WX-dV-HzT"/>
                     </view>
                     <navigationItem key="navigationItem" title="add new photo" id="5zJ-HA-v24"/>
+                    <connections>
+                        <outlet property="placeholderPhoto" destination="KKL-oz-B2Q" id="XQy-fC-qI3"/>
+                        <outlet property="textField" destination="ClA-aU-2zf" id="SQA-bY-8IK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnW-A0-7Km" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,4 +158,5 @@
     <resources>
         <image name="UNADJUSTEDNONRAW_thumb_14e0" width="1089" height="722"/>
     </resources>
+    <color key="tintColor" red="0.84391905990000005" green="0.82439002390000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
